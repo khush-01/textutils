@@ -32,6 +32,7 @@ function TextForm(props) {
           onClick={() => {
             setText(text.toUpperCase());
           }}
+          disabled={text.length === 0}
         >
           Convert to Uppercase
         </button>
@@ -40,6 +41,7 @@ function TextForm(props) {
           onClick={() => {
             setText(text.toLowerCase());
           }}
+          disabled={text.length === 0}
         >
           Convert to Lowercase
         </button>
@@ -48,6 +50,7 @@ function TextForm(props) {
           onClick={() => {
             setText(text.split(/[ ]+/).join(" "));
           }}
+          disabled={text.length === 0}
         >
           Remove Extra Spaces
         </button>
@@ -56,6 +59,7 @@ function TextForm(props) {
           onClick={() => {
             navigator.clipboard.writeText(text);
           }}
+          disabled={text.length === 0}
         >
           Copy Text
         </button>
@@ -64,6 +68,7 @@ function TextForm(props) {
           onClick={() => {
             setText("");
           }}
+          disabled={text.length === 0}
         >
           Clear Text
         </button>
